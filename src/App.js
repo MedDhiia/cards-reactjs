@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Cards from "./Components/Cards/Cards";
+import Personas from "./Components/Personas/Personas";
 import "./App.css";
 import { fetchPersonas } from "./Services/personas.service";
 import { Spinner } from "react-bootstrap";
@@ -34,8 +34,7 @@ function App() {
         )}
         {!isLoading && !isError && isVisible && (
           <>
-            <Cards />
-            <Cards />
+            <Personas personas={personas} />
           </>
         )}
       </div>

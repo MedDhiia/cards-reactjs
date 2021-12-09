@@ -1,16 +1,13 @@
 import "./Cards.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Cards() {
+function Cards(props) {
   return (
     <div className="card-persona">
       <div className="wrapper">
-        <img
-          src="//toppng.com/uploads/preview/flat-faces-icons-circle-persona-icon-115628952315akhsf8ncl.png"
-          alt=""
-        />
-        <div className="fullname">Dhia Karoui</div>
-        <div className="age">Age : 50 ans</div>
+        <img src={props.person.avatar} alt="" />
+        <div className="fullname">{props.person.fullName}</div>
+        <div className="age">Age : {props.person.age} ans</div>
       </div>
       <div className="content">
         <p>
