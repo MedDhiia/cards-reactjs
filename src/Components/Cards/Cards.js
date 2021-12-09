@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Cards() {
   return (
-    <div className="card">
+    <div className="card-persona">
       <div className="wrapper">
         <img
           src="//toppng.com/uploads/preview/flat-faces-icons-circle-persona-icon-115628952315akhsf8ncl.png"
           alt=""
         />
-        <div className="fullname">Andrew Neil</div>
-        <div className="age">Surkhet, Nepal</div>
+        <div className="fullname">Dhia Karoui</div>
+        <div className="age">Age : 50 ans</div>
       </div>
       <div className="content">
         <p>

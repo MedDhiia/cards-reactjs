@@ -7,7 +7,7 @@ body {
   padding: 50px;
   text-align: center;
 }
-.card {
+.card-persona {
   height: 250px;
   width: 250px;
   overflow: hidden;
@@ -17,13 +17,13 @@ body {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
   background: linear-gradient(45deg, #4d5357, #3f3c41);
 }
-.card:hover {
+.card-persona:hover {
   height: 470px;
   width: 350px;
   border-radius: 5px;
   box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
 }
-.card .wrapper img {
+.card-persona .wrapper img {
   position: relative;
   z-index: 20;
   border-radius: 50%;
@@ -35,7 +35,7 @@ body {
   margin: 20px auto;
   transition: all 0.3s ease;
 }
-.card:hover .wrapper img.active {
+.card-persona:hover .wrapper img.active {
   height: 470px;
   width: 350px;
   margin: 0px auto;
@@ -43,6 +43,7 @@ body {
   border-radius: 5px;
 }
 .wrapper .fullname {
+  text-align: center;
   color: #fff;
   font-size: 30px;
   font-weight: 500;
@@ -50,12 +51,14 @@ body {
   line-height: 25px;
 }
 .wrapper .age {
+  text-align: center;
   color: #fff;
   font-size: 17px;
   line-height: 0px;
   margin: 10px 0;
 }
 .content {
+  text-align: center;
   color: #fff;
   font-size: 17px;
   margin-top: 10px;
@@ -84,16 +87,16 @@ body {
 .btn button:hover {
   transform: scale(0.95);
 }
-.card .icons {
+.card-persona .icons {
   position: relative;
   margin-top: -435px;
   margin-left: 10px;
   list-style: none;
 }
-.card .icons.active {
+.card-persona .icons.active {
   display: none;
 }
-.card .icons li {
+.card-persona .icons li {
   height: 40px;
   width: 40px;
   margin: 5px 0;
@@ -101,17 +104,17 @@ body {
   margin-left: -100px;
   transition: all 0.5s ease;
 }
-.card:hover .icons li {
+.card-persona:hover .icons li {
   opacity: 1;
   margin-left: 7px;
 }
-.card:hover .icons li:nth-child(2) {
+.card-persona:hover .icons li:nth-child(2) {
   transition-delay: 0.2s;
 }
-.card:hover .icons li:nth-child(3) {
+.card-persona:hover .icons li:nth-child(3) {
   transition-delay: 0.4s;
 }
-.card .icons li a {
+.card-persona .icons li a {
   color: #dcd9df;
   height: 100%;
   width: 100%;
@@ -121,6 +124,6 @@ body {
   line-height: 40px;
   transition: all 0.3s;
 }
-.card .icons li a:hover {
+.card-persona .icons li a:hover {
   transform: scale(0.9);
 }
