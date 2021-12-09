@@ -3,14 +3,16 @@ let personas = [
     id: "1",
     fullName: "Jean Smith",
     age: 60,
-    avatar: "",
+    avatar:
+      "//toppng.com/uploads/preview/flat-faces-icons-circle-persona-icon-115628952315akhsf8ncl.png",
     hobbies: ["A", "B"],
   },
   {
     id: "2",
     fullName: "Alex Smith",
     age: 30,
-    avatar: "",
+    avatar:
+      "//www.jonathan-menet.fr/blog/wp-content/uploads/2019/10/Personas-generateur-avatar_3.jpg",
     hobbies: ["C", "B"],
   },
 ];
