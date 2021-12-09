@@ -63,6 +63,6 @@ export const updatePersona = async (id, persona) => {
     avatar: persona.avatar,
     hobbies: persona.hobbies,
   };
-  tasks = tasks.map((p) => (p.id === id ? updatedPersona : p));
+  personas = personas.map((p) => (p.id === id ? updatedPersona : p));
   return updatedPersona;
 };
