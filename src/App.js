@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import Personas from "./Components/Personas/Personas";
 import "./App.css";
-import { fetchPersonas } from "./Services/personas.service";
+import { useState, useEffect } from "react";
 import { Spinner, Container, Row } from "react-bootstrap";
+import { fetchPersonas } from "./Services/personas.service";
+import Personas from "./Components/Personas/Personas";
+import Forms from "./Components/Cards/Forms/Forms";
 
 function App() {
   const [isVisible, setIsVisible] = useState(true);
@@ -35,6 +36,7 @@ function App() {
         {!isLoading && !isError && isVisible && (
           <>
             <Row>
+              <Forms />
               <Personas personas={personas} />
             </Row>
           </>
