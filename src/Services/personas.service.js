@@ -2,10 +2,10 @@ let personas = [
   {
     id: "1",
     fullName: "Jean Smith",
-    age: 25,
+    age: 50,
     avatar:
-      "//toppng.com/uploads/preview/flat-faces-icons-circle-persona-icon-115628952315akhsf8ncl.png",
-    hobbies: ["ReactJS", "NodeJS", "MangoDB"],
+      "//www.jonathan-menet.fr/blog/wp-content/uploads/2019/10/Personas-generateur-avatar_2.jpg",
+    hobbies: ["JAVA", "C+", "C#"],
   },
   {
     id: "2",
@@ -18,10 +18,10 @@ let personas = [
   {
     id: "3",
     fullName: "Adam Smith",
-    age: 50,
+    age: 25,
     avatar:
-      "//www.jonathan-menet.fr/blog/wp-content/uploads/2019/10/Personas-generateur-avatar_2.jpg",
-    hobbies: ["JAVA", "C+", "C#"],
+      "//pngimage.net/wp-content/uploads/2019/05/dessin-homme-femme-png-1.png",
+    hobbies: ["ReactJS", "NodeJS", "MangoDB"],
   },
 ];
 
@@ -30,7 +30,7 @@ function delay(ms) {
 }
 
 export const fetchPersonas = async () => {
-  await delay(3000);
+  await delay(1000);
   return personas;
 };
 

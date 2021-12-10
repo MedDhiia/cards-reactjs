@@ -1,7 +1,10 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Spinner, Container, Row } from "react-bootstrap";
-import { fetchPersonas } from "./Services/personas.service";
+import { Spinner, Container, Row, CardGroup } from "react-bootstrap";
+import {
+  fetchPersonas,
+  addPersona as addPersonaFromService,
+} from "./Services/personas.service";
 import Personas from "./Components/Personas/Personas";
 import Forms from "./Components/Cards/Forms/Forms";
 
@@ -10,6 +13,16 @@ function App() {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [personas, setPersonas] = useState([]);
+
+  const addNewPersona = async (newPersona) => {
+    try {
+      setIsLoading(true);
+      setPersonas([...personas, await addPersonaFromService(newPersona)]);
+      setIsLoading(false);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   useEffect(() => {
     // (async () => setTasks(await fetchTasks()))();
@@ -25,24 +38,26 @@ function App() {
         setIsVisible(false);
       }
     })();
-  }, []);
+  }, [personas]);
 
   return (
-    <div className="App">
-      <Container>
-        {isLoading && !isError && (
-          <Spinner className="loading" animation="border" />
-        )}
-        {!isLoading && !isError && isVisible && (
-          <>
-            <Row>
-              <Forms />
+    // <div className="App">
+    <Container>
+      {isLoading && !isError && (
+        <Spinner className="loading" animation="border" />
+      )}
+      {!isLoading && !isError && isVisible && (
+        <>
+          <Row>
+            <CardGroup>
+              <Forms addNewPersona={addNewPersona} />
               <Personas personas={personas} />
-            </Row>
-          </>
-        )}
-      </Container>
-    </div>
+            </CardGroup>
+          </Row>
+        </>
+      )}
+    </Container>
+    // </div>
   );
 }
 
