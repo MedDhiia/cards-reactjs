@@ -1,5 +1,6 @@
 import "./Cards.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Badge } from "react-bootstrap";
 
 function Cards(props) {
   return (
@@ -10,10 +11,9 @@ function Cards(props) {
         <div className="age">Age : {props.person.age} ans</div>
       </div>
       <div className="content">
-        <p>
-          User Interface Designer and <br></br>
-          front-end developer
-        </p>
+        {props.person.hobbies.map((h) => (
+          <Badge bg="secondary">{h}</Badge>
+        ))}
         <div className="buttons">
           <div className="btn">
             <button>Edit</button>

@@ -5,7 +5,7 @@ let personas = [
     age: 60,
     avatar:
       "//toppng.com/uploads/preview/flat-faces-icons-circle-persona-icon-115628952315akhsf8ncl.png",
-    hobbies: ["A", "B"],
+    hobbies: ["Read", "Write"],
   },
   {
     id: "2",
@@ -13,7 +13,7 @@ let personas = [
     age: 30,
     avatar:
       "//www.jonathan-menet.fr/blog/wp-content/uploads/2019/10/Personas-generateur-avatar_3.jpg",
-    hobbies: ["C", "B"],
+    hobbies: ["Surf", "Coding"],
   },
 ];
 
