@@ -1,46 +1,38 @@
 import "./Cards.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Badge } from "react-bootstrap";
+import { Badge, Col, Card, Button } from "react-bootstrap";
 
 function Cards(props) {
   return (
-    <div className="card-persona">
-      <div className="wrapper">
-        <img src={props.person.avatar} alt="" />
-        <div className="fullname">{props.person.fullName}</div>
-        <div className="age">Age : {props.person.age} ans</div>
-      </div>
-      <div className="content">
-        {props.person.hobbies.map((h) => (
-          <Badge bg="secondary">{h}</Badge>
-        ))}
-        <div className="buttons">
-          <div className="btn">
-            <button>Edit</button>
-          </div>
-          <div className="btn">
-            <button>Delete</button>
-          </div>
+    <Col>
+      <Card className="card-persona">
+        <div className="wrapper">
+          <Card.Img variant="top" src={props.person.avatar} />
+          <Card.Body>
+            <Card.Title className="fullname">
+              {props.person.fullName}
+            </Card.Title>
+            <Card.Title className="age">
+              Age : {props.person.age} ans
+            </Card.Title>
+            <Card.Text className="content">
+              {props.person.hobbies.map((h) => (
+                <Badge bg="secondary">{h}</Badge>
+              ))}
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer className="footer">
+            <div className="buttons">
+              <Button variant="light" className="btn">
+                Edit
+              </Button>
+              <Button variant="light" className="btn">
+                Delete
+              </Button>
+            </div>
+          </Card.Footer>
         </div>
-      </div>
-      {/* <div class="icons">
-        <li>
-          <a href="#">
-            <FontAwesomeIcon icon={["fas", "facebook"]} />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <FontAwesomeIcon icon={["fas", "twitter"]} />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <FontAwesomeIcon icon={["fas", "instagram"]} />
-          </a>
-        </li>
-      </div> */}
-    </div>
+      </Card>
+    </Col>
   );
 }
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Personas from "./Components/Personas/Personas";
 import "./App.css";
 import { fetchPersonas } from "./Services/personas.service";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Container, Row } from "react-bootstrap";
 
 function App() {
   const [isVisible, setIsVisible] = useState(true);
@@ -28,16 +28,18 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
+      <Container>
         {isLoading && !isError && (
           <Spinner className="loading" animation="border" />
         )}
         {!isLoading && !isError && isVisible && (
           <>
-            <Personas personas={personas} />
+            <Row>
+              <Personas personas={personas} />
+            </Row>
           </>
         )}
-      </div>
+      </Container>
     </div>
   );
 }

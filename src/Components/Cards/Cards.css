@@ -12,7 +12,7 @@ body {
   width: 250px;
   overflow: hidden;
   margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 50% !important;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
   background: linear-gradient(45deg, #4d5357, #3f3c41);
@@ -20,7 +20,7 @@ body {
 .card-persona:hover {
   height: 470px;
   width: 350px;
-  border-radius: 5px;
+  border-radius: 5px !important;
   box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
 }
 .card-persona .wrapper img {
@@ -64,7 +64,7 @@ body {
   margin-top: 10px;
   padding: 1px 20px 10px 20px !important;
 }
-.content .buttons {
+.footer .buttons {
   display: flex;
 }
 .buttons .btn {
@@ -72,7 +72,7 @@ body {
   width: 150px;
   margin: 0 5px;
 }
-.buttons .btn button {
+.buttons .btn {
   height: 100%;
   width: 100%;
   background: #fff;
@@ -84,7 +84,7 @@ body {
   border-radius: 5px;
   transition: all 0.3s;
 }
-.btn button:hover {
+.btn:hover {
   transform: scale(0.95);
 }
 .card-persona .icons {
